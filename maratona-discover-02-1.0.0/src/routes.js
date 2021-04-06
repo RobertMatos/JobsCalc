@@ -1,6 +1,8 @@
 const express = require('express')
 const routes = express.Router()
 const ProfileController = require('./controllers/ProfileController')
+const Profile = require('./model/Profile')
+
 
 const Job = {
     data: [
@@ -33,7 +35,7 @@ const Job = {
                         ...job,
                         remaining,
                         status,
-                        budget: Job.services.calculateBudget(job, Profile.data["value-hour"])
+                        budget: Job.services.calculateBudget(job, Profile["value-hour"])
                     }
                 })) 
                 
