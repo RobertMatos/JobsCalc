@@ -2,6 +2,7 @@ const express = require("express")
 const server = express()
 const routes = require("./routes")
 const path = require("path")
+var porta = process.env.PORT || 8080
 
 //EJS é uma egine que roda html
 //server.set -> setar configuração
@@ -21,4 +22,4 @@ server.use(express.urlencoded({extended: true}))
 //Routes
 server.use(routes)
 
-server.listen(3000, () => console.log('rodando'))
+server.listen(porta, () => console.log('rodando'))
