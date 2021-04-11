@@ -14,7 +14,7 @@ const initDb = {
                 days_per_week INT,
                 hours_per_day INT,
                 vacation_per_year INT,
-                value_hours INT
+                value_hour INT
             )
         `);
 
@@ -35,14 +35,16 @@ const initDb = {
                 monthly_budget, 
                 days_per_week, 
                 hours_per_day, 
-                vacation_per_year
+                vacation_per_year,
+                value_hour
                 ) VALUES ( 
                     "Robert",
                     "https://github.com/robertmatos.png",
                     3000,
                     5,
                     5,
-                    4
+                    4,
+                    70
                 );
         `)
 
